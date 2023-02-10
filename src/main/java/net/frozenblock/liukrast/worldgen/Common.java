@@ -4,7 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.frozenblock.liukrast.worldgen.biome.MesaBiome;
-import net.frozenblock.liukrast.worldgen.biome.SnowyPlains;
+import net.frozenblock.liukrast.worldgen.biome.Plains;
 import net.frozenblock.liukrast.worldgen.feature.BiomeGenerator;
 import net.frozenblock.liukrast.worldgen.feature.WorldSurfaceGenerator;
 import net.minecraft.util.Identifier;
@@ -33,7 +33,7 @@ public class Common implements ModInitializer {
         Registry.register(BuiltinRegistries.PLACED_FEATURE, worldgenid, WSG_PLACED);
 
         BiomeGenerator.register(new MesaBiome());
-        BiomeGenerator.register(new SnowyPlains());
+        BiomeGenerator.register(new Plains());
 
         BiomeModifications.addFeature(BiomeSelectors.all(), GenerationStep.Feature.TOP_LAYER_MODIFICATION, RegistryKey.of(Registry.PLACED_FEATURE_KEY, worldgenid));
     }

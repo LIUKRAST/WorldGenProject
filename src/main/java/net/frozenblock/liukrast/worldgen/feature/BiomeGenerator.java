@@ -14,7 +14,7 @@ public class BiomeGenerator {
     }
 
     public static void generateBiome(StructureWorldAccess world, double x, double z, double c, double s) {
-        double y = WorldgenHeightCalculator.height(x,z,c,s);
+        double y = WorldgenHeightCalculator.height(x,z,c,s + 20);
         int min = 20;
         int max = 200;
         double rY = AdvancedMath.range(min, max, y);
